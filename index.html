@@ -10,6 +10,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    ul.selected-seat li{
+      display: flex;
+      justify-content:space-between;
+      gap: 20px;
+      width: 433px;
+      margin: auto;
+      text-align: center;
+      list-style: numeric;
+    }
     </style>
   <script 
        src="https://kit.fontawesome.com/fd024a2187.js" crossorigin="anonymous">
@@ -227,7 +236,7 @@
                 </div>
               </div>
               <div class="flex gap-5 w-[180px]">
-                <button class="btn btn-[#1DD100] text-[#1DD100]"><img src="./Images/seat-gray.png"> 40 Seats left </button>
+                <button class="btn btn-[#1DD100] text-[#1DD100]"><img src="./Images/seat-gray.png"> <span id="number-seat">40</span>Seats left </button>
               </div>
              </div>
 
@@ -285,14 +294,86 @@
 
 
 
-       <div class="w-[1170px] h-[1056px] mx-auto mt-[50px] bg-[#FFFFFF] rounded-3xl flex justify-between">
+       <div class="w-[1170px] h-[1056px] mx-auto mt-[50px] bg-[#FFFFFF] rounded-3xl flex justify-between pt-[20px]">
             <div class="siting-position w-[670px]">
+                <div class="row-sit-a font-raleway font-semibold text-[18px] mx-[10px] mt-[10px]">Select Your Seat</div>
+                <div class="row-sit-b flex justify-between">
+                  <span class="flex"><img src="./Images/seat-gray.png"> Available</span>
+                  <span class="flex"><img src="./Images/seat-green.png"> Selected</span>
+                </div>
+                <div class="row-sit-C" id="row-sit-C">
+                    <div class="row-sit-driver">
+                      <span class="uppercase">a</span>
+                    </div>
+                    <div class="row-sit-a">
+                         <span class="uppercase uppercase w-[110px] h-[56px] btn font-inter text-[18px]">a</span>
+                         <button class="add-btn uppercase w-[110px] h-[56px] btn font-inter text-[18px] ">a1</button>
+                         <button class="add-btn uppercase w-[110px] h-[56px] btn font-inter text-[18px]">a2</button>
+                         <button class="add-btn uppercase gap-3 w-[110px] h-[56px] btn font-inter text-[18px]">a3</button>
+                         <button class="add-btn uppercase w-[110px] h-[56px] btn font-inter text-[18px]">a4</button>
 
-            </div>
-            <div class="divider w-[3px]">hsa</div>
-            <div class="select-sit w-[500px]">
 
+                    </div>
+                    <div class="row-sit-a">
+                      <span class="uppercase uppercase w-[110px] h-[56px] btn font-inter text-[18px]">b</span>
+                      <button class="add-btn uppercase w-[110px] h-[56px] btn font-inter text-[18px] ">b1</button>
+                      <button class="add-btn uppercase w-[110px] h-[56px] btn font-inter text-[18px]">b2</button>
+                      <button class="add-btn uppercase gap-3 w-[110px] h-[56px] btn font-inter text-[18px]">b3</button>
+                      <button class="add-btn uppercase w-[110px] h-[56px] btn font-inter text-[18px]">b4</button>
+
+
+                 </div>
+                    
+                  
+                  
+                  </div>
+
+                </div>
+
+
+                <div class="divide-y w-[10px]"></div>
+                <div class="select-sit w-[485px]">
+                  <div class="row-sit-a font-raleway font-semibold text-[18px] mx-[10px] mt-[10px]"  style="padding-bottom:10px; border-bottom: dotted black;">Select Your Seat</div>
+                  <div class="w-[433px] h-[340px] bg-[#f7f8f8] mx-auto rounded-3xl  m-[10px]">
+                    <div class="flex justify-between">
+                      <span>seat <span id="count-seat">0</span></span> 
+                      <span>class</span>
+                      <span>price</span>
+                    </div>
+                    <ul id="selected-seat" class="selected-seat pb-10px">
+                     
+
+
+                    </ul>
+
+                    <div class="flex justify-between">
+                      <span>Total Price</span>
+                      <span>BDT <span id="total-value">0</span></span>
+                    </div>
+                    <div id="cupponDiv" class="cupponDiv hidden">
+                      <input type="text" id="cupponCode" placeholder="Have any copupon?">
+                      <button class="btn btn-apply" onclick="applyFunction()">apply</button>
+                    </div>
+                    <div id="disPrice" class="flex justify-between hidden">
+                      <span>Discount</span>
+                      <span>BDT <span id="cupon-value">0</span></span>
+                    </div>
+                    <div id="disPriceErorr" class=" hidden">
+                      <span>wrong cuppon kode</span>
+                      
+                    </div>
+
+                    <div class="flex justify-between">
+                      <span>Grand Total</span>
+                      <span>BDT <span id="total-grand">0</span></span>
+                    </div>
+
+
+                  </div>
+    
+                </div>
             </div>
+            
 
        </div>
 
@@ -311,7 +392,14 @@
 
     </footer>
     
+    <script src="./app.js"></script>
 
+<script>
+let count = 0;
+
+const allBtn = document.getElementsByClassName("add-btn");
+
+</script>
 
 
   </body>
