@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     ul.selected-seat li{
       display: flex;
       justify-content:space-between;
@@ -45,9 +45,82 @@
       .font-inter{
         font-family: "Inter", sans-serif;
       }
+      .roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
   </style>
   </head>
-  <body class="font-raleway">
+  <body  class="font-raleway">
+    <div id="tpoket">
     <header>
       
       <div class="container h-[57px] mx-auto  w-[1170px] mt-[48px] mb-[25px] contain-border">
@@ -370,6 +443,27 @@
 
 
                   </div>
+                  <div>
+<form>
+<div>
+<label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passenger Name*</label>
+<input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required />
+</div>
+
+
+<div>
+<label for="phone" id="mobile" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number*</label>
+<input onkeyup="myFunction()" type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+</div>
+<div class="mb-6">
+<label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email ID</label>
+<input  type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 " placeholder="john.doe@company.com" required />
+</div> 
+
+
+<button id="btn-next"  onclick="submiteFunction()" type="submit" class="font-raleway text-[18px] text-white bg-[#1dd100] hover:bg-[#1dd100] w-full   rounded-lg text-sm   px-5 py-2.5 disabled:opacity-30" disabled>Next</button>
+</form>
+                  </div>
     
                 </div>
             </div>
@@ -391,15 +485,29 @@
 
 
     </footer>
-    
+   </div>
+   <div id="model-suc">
+
+
+    <div class="hero min-h-screen bg-base-200">
+      <div class="hero-content text-center">
+        <div class="max-w-[715px] h-[475px] my-auto bg-[#ffffff] px-[85px] py-[50px]">
+            <div class="h-[104px]"><img src="./Images/success.png" class="mx-auto"></div>
+            
+            <h1 class="text-roboto-bold text-[#27ae60] text-[24px] font-bold h-[100px] py-[38px]">SUCCESS</h1>
+            <p class="h-[92px] "><span class="roboto-bold text-[19px] text-[#4A4A4A]">Thank you for Booking Our Bus Seats.<br> 
+              We are working hard to find the best service and deals for you.</span> 
+              <span class="roboto-regular pb-[20px]">Shortly you will find a confirmation in your email.</span></p>
+            <button class="btn bg-[#27ae60] text-[#ffffff] w-[294px] h-[54px] rounded-3xl" onclick="contFunction()">Continue</button>
+          
+          
+        </div>
+      </div>
+    </div>
+
+   </div>
     <script src="./app.js"></script>
 
-<script>
-let count = 0;
-
-const allBtn = document.getElementsByClassName("add-btn");
-
-</script>
 
 
   </body>

@@ -12,15 +12,19 @@ for(const btn of allBtns){
     if(count===4){
       showElementByID("cupponDiv");
       
-    }else if(count>4){
+    }
+    
+    else if(count>4){
       document.getElementById("row-sit-C").innerHTML("disabled", true);
+      
     }
     
     else{
       hideElementByID("cupponDiv");
     }
-    setInnerText("number-seat",count)
-    setInnerText("count-seat",count)
+    let number=getValue("number-seat");
+    setInnerText("number-seat",40-count);
+    setInnerText("count-seat",count);
     
 
     const name=e.target.innerText;
@@ -59,6 +63,29 @@ for(const btn of allBtns){
       
   })
 }
+// function passFunction(){
+//   // let x = document.getElementById("mobile");
+//   let x = document.getElementById("mobile").value;
+//   // x.value = x.value.toUpperCase();
+//   // alert(x);
+//   console.log(x)
+// }
+
+
+function myFunction() {
+  var x = document.getElementById("phone").value;
+  // document.getElementById("mobile").innerHTML = x.length;
+ let count= getValue("count-seat");
+
+//  document.getElementById("mobile").innerHTML = count;
+  
+   if(x.length==10 && count>0){
+          document.getElementById("btn-next").disabled=false;
+        }else{
+          document.getElementById("btn-next").disabled=true;
+        }
+  
+}
 
 function applyFunction(){
     showElementByID("disPrice");
@@ -95,7 +122,15 @@ function showElementByID(elementID){
   const section = document.getElementById(elementID); 
   section.classList.remove('hidden');
 }
+function submiteFunction(){
+  hideElementByID("tpoket");
+}
 
+function contFunction(){
+  // hideElementByID("tpoket");
+  showElementByID("tpoket");
+  hideElementByID("model-suc");
+}
 function getValue(id) {
   const valueInnerText = document.getElementById(id).innerText;
   const value = parseInt(valueInnerText);
