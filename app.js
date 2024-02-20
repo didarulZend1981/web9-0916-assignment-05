@@ -124,6 +124,7 @@ function showElementByID(elementID){
 }
 function submiteFunction(){
   hideElementByID("tpoket");
+  showElementByID("model-suc");
 }
 
 function contFunction(){
