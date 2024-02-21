@@ -19,6 +19,18 @@
       text-align: center;
       list-style: numeric;
     }
+    span#count-seat{
+    
+      border-radius: 50%;
+      background-color: green;
+      padding: 5px;
+      border: none;
+      color: white;
+      font-size: 14px;
+      font-family: 'Inter';
+      font-weight: 800;
+      
+    }
     </style>
   <script 
        src="https://kit.fontawesome.com/fd024a2187.js" crossorigin="anonymous">
@@ -123,7 +135,7 @@
     <div id="tpoket">
     <header>
       
-      <div class="container h-[57px] mx-auto  w-[1170px] mt-[48px] mb-[25px] contain-border">
+      <div class="contain h-[57px] mx-auto  w-[1170px] mt-[48px] mb-[25px] contain-border">
         <div class="navbar bg-base-100">
           <div class="navbar-start">
             <div class="dropdown">
@@ -160,6 +172,8 @@
           </div>
         </div>
       </div>
+
+      
 
 
       <div class="relative min-h-[550px] w-[1170px] mx-auto bg-contain" style="background-image: url('./Images/banner.png');">
@@ -502,7 +516,7 @@
                  
                     <div id="cupponDiv" class="cupponDiv hidden">
                       <input type="text" id="cupponCode" placeholder="Have any copupon?" class="w-full p-[10px] rounded-2xl">
-                      <button class="float-right absolute ml-[-99px] btn bg-[#1dd100] text-[#ffffff] btn-apply h-[20px]" onclick="applyFunction()">apply</button>
+                      <button class="float-right absolute ml-[-75px] btn bg-[#1dd100] text-[#ffffff] btn-apply" onclick="applyFunction()">apply</button>
                     </div>
 
                     
@@ -569,7 +583,43 @@
 
     </main>
 
-    <footer>
+    <footer class="w-[1440px] h-[460px] mx-auto bg-black">
+        <div class="w-[1170px] h-[225px mx-auto pt-[100px]">
+          <div class="h-[130x] flex justify-between">
+              <div>
+                
+                <a class="text-[36px] font-extrabold text-[#131318] text-[#FFFFFF]">P-Ticket</a>
+                <p class="text-[#FFFFFF] text-[18px] mt-[30px] font-inter">P-Ticket is a digital platform to make your<br> daily commuting better.</p>
+              </div>
+              <div class="w-[190px] h-[130px] text-[#ffffff]">
+                
+                <div class="app font-raleway text-[20px] font-semibold mb-[30px]">Download our app</div>
+                <div class="flex h-[56px] w-[185px] p-[5px]" style="border: 1px solid white; border-radius: 5px;">
+                  <div class="pl-[5px] pt-[3px]"><img src="./Images/playstore.png"></div>
+                  <div class="pl-[6px]">
+                    <h2 class="text-[10px]">GET IT ON</h2>
+                    <h2 class="text-[20px]">Google Play</h2>
+                    
+                  </div>
+                </div>
+                
+              </div>
+          </div>
+          <div class="divide-y-2 divider-accent divide-dashed md:divide-dashed mt-[25px] mb-[25px]">
+            <div class="text-center py-2 mt-[0px] mb-[0px]"></div>
+            <div class="text-center py-2 mt-[0px] mb-[0px]"></div>
+          </div>
+          <div class="flex justify-between text-[#ffffff]">
+            <p>@all rights reserved, P-Ticket services limited.2024</p>
+            <ul class="flex justify-between gap-5">
+              <li >Terms & condition</li>
+              <li>Return & refund policy</li>
+              <li>Privacy policy</li>
+            </ul>
+          </div>
+
+
+        </div>
       
         
      
