@@ -11,16 +11,18 @@ for(const btn of allBtns){
     
     if(count===4){
       showElementByID("cupponDiv");
-      
+      showElementByID("error");
     }
     
     else if(count>4){
       document.getElementById("row-sit-C").innerHTML("disabled", true);
+     
       
     }
     
     else{
       hideElementByID("cupponDiv");
+      
     }
     let number=getValue("number-seat");
     setInnerText("number-seat",40-count);

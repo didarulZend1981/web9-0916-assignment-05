@@ -31,6 +31,13 @@
       font-weight: 800;
       
     }
+    span#error{
+      padding-left:20px; 
+      color: rgb(131, 23, 23);
+      font-size: 18px;
+      font-family: 'Inter';
+      font-weight: 800;
+    }
     </style>
   <script 
        src="https://kit.fontawesome.com/fd024a2187.js" crossorigin="anonymous">
@@ -482,7 +489,7 @@
                 
                
                 <div class="select-sit w-[485px]">
-                  <div class="row-sit-a font-raleway font-semibold text-[18px] mx-[10px] mt-[10px]">Select Your Seat</div>
+                  <div class="row-sit-a font-raleway font-semibold text-[18px] mx-[10px] mt-[10px]">Select Your Seat<span id="error" class="hidden"> ::Max select 4 seat already::</span></div>
                   
                   <div class="divide-y-2 divider-accent divide-dashed md:divide-dashed">
                     <div class="text-center py-2"></div>
@@ -627,6 +634,7 @@
 
     </footer>
    </div>
+  </div>
    <div id="model-suc" class="hidden">
 
 
