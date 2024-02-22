@@ -126,12 +126,14 @@ function showElementByID(elementID){
 }
 function submiteFunction(){
   hideElementByID("tpoket");
+  hideElementByID("foot-id");
   showElementByID("model-suc");
 }
 
 function contFunction(){
   // hideElementByID("tpoket");
   showElementByID("tpoket");
+  showElementByID("foot-id");
   hideElementByID("model-suc");
 }
 function getValue(id) {
